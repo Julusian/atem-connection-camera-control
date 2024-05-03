@@ -41,12 +41,18 @@ export function applyLensCommand(
 			changes.addChange(command.source, 'lens.opticalImageStabilisation')
 			return
 		}
+		case AtemCameraControlLensParameter.SetContinuousZoomSpeed: {
+			if (!changes.checkMessageParameters(command, Commands.CameraControlDataType.FLOAT, 1)) return
+
+			state.lens.zoomSpeed = command.properties.numberData[0]
+			changes.addChange(command.source, 'lens.zoomSpeed')
+			return
+		}
 
 		case AtemCameraControlLensParameter.ApertureNormalised:
 		case AtemCameraControlLensParameter.ApertureOrdinal:
 		case AtemCameraControlLensParameter.SetAbsoluteZoomMM:
 		case AtemCameraControlLensParameter.SetAbsoluteZoomNormalised:
-		case AtemCameraControlLensParameter.SetContinuousZoomSpeed:
 			// Not implemented
 			changes.addUnhandledMessage(command)
 			return

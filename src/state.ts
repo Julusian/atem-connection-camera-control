@@ -51,7 +51,7 @@ export interface AtemCameraControlState {
 		//  *  0.0 = stop
 		//  * +1.0 = zoom tele fast
 		//  */
-		// zoomSpeed: number
+		zoomSpeed: number
 	}
 
 	video: {
