@@ -66,8 +66,8 @@
   },
   "devDependencies": {
     "@sofie-automation/code-standard-preset": "^2.5.2",
-    "@types/jest": "^29.5.11",
-    "@types/node": "18.19.10",
+    "@types/jest": "^29.5.12",
+    "@types/node": "18.19.32",
     "atem-connection": "^3.5.0",
     "jest": "^29.7.0",
     "jest-extended": "^4.0.2",
@@ -75,8 +75,8 @@
     "pinst": "^3.0.0",
     "rimraf": "^5.0.5",
     "ts-jest": "^29.1.2",
-    "typedoc": "^0.25.7",
-    "typescript": "^5.3.3"
+    "typedoc": "^0.25.13",
+    "typescript": "~5.3.3"
   },
   "prettier": "@sofie-automation/code-standard-preset/.prettierrc.json",
   "lint-staged": {
