@@ -80,6 +80,17 @@ export abstract class AtemCameraControlCommandGenerator<TRes> {
 		return this.addCommand(command)
 	}
 
+	lensSetContinuousZoomSpeed(cameraId: number, speed: number): TRes {
+		const command = new Commands.CameraControlCommand(
+			cameraId,
+			AtemCameraControlCategory.Lens,
+			AtemCameraControlLensParameter.SetContinuousZoomSpeed,
+			constructNumberProps(Commands.CameraControlDataType.FLOAT, [speed])
+		)
+
+		return this.addCommand(command)
+	}
+
 	// Video
 
 	videoManualWhiteBalance(cameraId: number, colorTemperature: number, tint: number): TRes {

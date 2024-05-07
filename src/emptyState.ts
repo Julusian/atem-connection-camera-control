@@ -11,7 +11,7 @@ export function createEmptyState(cameraId: number): AtemCameraControlState {
 			// autoIris: boolean
 			opticalImageStabilisation: false,
 			// zoomPosition: 0,
-			// zoomSpeed: 0,
+			zoomSpeed: 0,
 		},
 
 		video: {
