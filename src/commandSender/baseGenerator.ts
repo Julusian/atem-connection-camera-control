@@ -86,7 +86,7 @@ export abstract class AtemCameraControlCommandGenerator<TRes> {
 			AtemCameraControlCategory.Lens,
 			AtemCameraControlLensParameter.SetContinuousZoomSpeed,
 			constructNumberProps(Commands.CameraControlDataType.FLOAT, [speed])
-		);
+		)
 
 		return this.addCommand(command)
 	}
