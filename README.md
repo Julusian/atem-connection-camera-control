@@ -10,7 +10,7 @@ This library can be used with atem-connection [NPM](https://www.npmjs.com/packag
 ### Example:
 
 ```ts
-import { Atem } from 'atem-connection'
+import { Atem, Commands } from 'atem-connection'
 import { AtemCameraControlDirectCommandSender, AtemCameraControlStateBuilder } from '@atem-connection/camera-control'
 
 // Create the class which tracks the current state from the atem
