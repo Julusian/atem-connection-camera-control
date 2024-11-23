@@ -96,6 +96,8 @@ jobs:
       - name: Check release is desired
         id: do-publish
         run: |
+          corepack enable
+
           if [ -z "${{ secrets.NPM_TOKEN }}" ]; then
             echo "No Token"
           else
@@ -122,7 +124,6 @@ jobs:
       - name: Prepare build
         if: ${{ steps.do-publish.outputs.tag }}
         run: |
-          corepack enable
           yarn install
           yarn build
         env:
