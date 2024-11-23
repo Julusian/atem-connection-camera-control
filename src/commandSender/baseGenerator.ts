@@ -4,6 +4,7 @@ import {
 	AtemCameraControlColorCorrectionParameter,
 	AtemCameraControlDisplayParameter,
 	AtemCameraControlLensParameter,
+	AtemCameraControlMediaParameter,
 	AtemCameraControlVideoParameter,
 } from '../ids'
 import { constructNumberProps, constructBooleanProps } from './props'
@@ -269,6 +270,29 @@ export abstract class AtemCameraControlCommandGenerator<TRes> {
 			AtemCameraControlCategory.ColorCorrection,
 			AtemCameraControlColorCorrectionParameter.ResetToDefaults,
 			constructBooleanProps([])
+		)
+
+		return this.addCommand(command)
+	}
+
+	// Media
+
+	mediaTriggerSetRecording(cameraId: number): TRes {
+		const command = new Commands.CameraControlCommand(
+			cameraId,
+			AtemCameraControlCategory.Media,
+			AtemCameraControlMediaParameter.TransportMode,
+			constructNumberProps(Commands.CameraControlDataType.SINT8, [2, 0, 0, 0, 0], false)
+		)
+
+		return this.addCommand(command)
+	}
+	mediaTriggerSetStopped(cameraId: number): TRes {
+		const command = new Commands.CameraControlCommand(
+			cameraId,
+			AtemCameraControlCategory.Media,
+			AtemCameraControlMediaParameter.TransportMode,
+			constructNumberProps(Commands.CameraControlDataType.SINT8, [0, 0, 0, 0, 0], false)
 		)
 
 		return this.addCommand(command)

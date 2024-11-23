@@ -27,7 +27,7 @@ atem.on('connected', () => {
 
 	// Perform an autofocus of camera 1 after a short timeout
 	setTimeout(() => {
-		cameraControlSender.triggerAutoFocus(1)
+		cameraControlSender.lensTriggerAutoFocus(1)
 	}, 1000)
 })
 atem.on('disconnected', () => {
