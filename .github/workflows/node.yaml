@@ -81,6 +81,9 @@ jobs:
     # only run for tags
     if: contains(github.ref, 'refs/tags/')
 
+    permissions:
+      contents: write
+
     needs:
       - test
       # - validate-dependencies
