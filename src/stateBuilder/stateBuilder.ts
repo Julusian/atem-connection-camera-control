@@ -5,6 +5,7 @@ import { applyVideoCommand } from './video'
 import { applyLensCommand } from './lens'
 import { applyDisplayCommand } from './display'
 import { applyColorCorrectionCommand } from './colorCorrection'
+import { applyOutputCommand } from './output'
 import { createEmptyState } from '../emptyState'
 import { AtemCameraControlCategory } from '../ids'
 import { AtemCameraControlChanges } from '../changes'
@@ -62,8 +63,10 @@ export class AtemCameraControlStateBuilder {
 				case AtemCameraControlCategory.ColorCorrection:
 					applyColorCorrectionCommand(changes, command, state)
 					break
-				case AtemCameraControlCategory.Audio:
 				case AtemCameraControlCategory.Output:
+					applyOutputCommand(changes, command, state)
+					break
+				case AtemCameraControlCategory.Audio:
 				case AtemCameraControlCategory.Tally:
 				case AtemCameraControlCategory.Reference:
 				case AtemCameraControlCategory.Configuration:

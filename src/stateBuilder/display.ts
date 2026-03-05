@@ -19,8 +19,20 @@ export function applyDisplayCommand(
 			return
 		}
 
+		case AtemCameraControlDisplayParameter.ExposureAndFocusTools: {
+			if (!changes.checkMessageParameters(command, Commands.CameraControlDataType.SINT16, 1)) return
+
+			const value = command.properties.numberData[0]
+			state.display.exposureAndFocusTools = {
+				zebra: (value & 1) !== 0,
+				focusAssist: (value & 2) !== 0,
+				falseColor: (value & 4) !== 0,
+			}
+			changes.addChange(command.source, 'display.exposureAndFocusTools')
+			return
+		}
+
 		case AtemCameraControlDisplayParameter.Brightness:
-		case AtemCameraControlDisplayParameter.ExposureAndFocusTools:
 		case AtemCameraControlDisplayParameter.ZebraLevel:
 		case AtemCameraControlDisplayParameter.PeakingLevel:
 		case AtemCameraControlDisplayParameter.FocusAssist:

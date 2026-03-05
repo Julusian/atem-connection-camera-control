@@ -5,6 +5,7 @@ import {
 	AtemCameraControlDisplayParameter,
 	AtemCameraControlLensParameter,
 	AtemCameraControlMediaParameter,
+	AtemCameraControlOutputParameter,
 	AtemCameraControlVideoParameter,
 } from '../ids'
 import { constructNumberProps, constructBooleanProps } from './props'
@@ -180,6 +181,36 @@ export abstract class AtemCameraControlCommandGenerator<TRes> {
 			AtemCameraControlCategory.Display,
 			AtemCameraControlDisplayParameter.ColorBarEnable,
 			constructNumberProps(Commands.CameraControlDataType.SINT8, [enable ? 30 : 0])
+		)
+
+		return this.addCommand(command)
+	}
+
+	displayExposureAndFocusTools(
+		cameraId: number,
+		zebra: boolean,
+		focusAssist: boolean,
+		falseColor: boolean
+	): TRes {
+		const value = (zebra ? 1 : 0) + (focusAssist ? 2 : 0) + (falseColor ? 4 : 0)
+		const command = new Commands.CameraControlCommand(
+			cameraId,
+			AtemCameraControlCategory.Display,
+			AtemCameraControlDisplayParameter.ExposureAndFocusTools,
+			constructNumberProps(Commands.CameraControlDataType.SINT16, [value])
+		)
+
+		return this.addCommand(command)
+	}
+
+	// Output
+
+	outputOverlayEnables(cameraId: number, enable: boolean): TRes {
+		const command = new Commands.CameraControlCommand(
+			cameraId,
+			AtemCameraControlCategory.Output,
+			AtemCameraControlOutputParameter.OverlayEnables,
+			constructNumberProps(Commands.CameraControlDataType.SINT16, [enable ? 1 : 0])
 		)
 
 		return this.addCommand(command)
