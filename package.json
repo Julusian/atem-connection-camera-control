@@ -64,6 +64,7 @@
   "devDependencies": {
     "@sofie-automation/code-standard-preset": "^3.2.2",
     "@types/node": "^22.19.15",
+    "@vitest/coverage-v8": "^4.1.1",
     "atem-connection": "^3.9.0",
     "eslint": "^9.39.4",
     "husky": "^9.1.7",
