@@ -103,7 +103,14 @@ export interface AtemCameraControlState {
 
 	display: {
 		// brightness: number
-		// exposureAndFocusTools: unknown
+
+		/** Exposure and focus tools bitmask: bit 0 = zebra, bit 1 = focus assist, bit 2 = false color */
+		exposureAndFocusTools: {
+			zebra: boolean
+			focusAssist: boolean
+			falseColor: boolean
+		}
+
 		// zebraLevel: number
 		// peakingLevel: number
 
@@ -112,6 +119,15 @@ export interface AtemCameraControlState {
 		// focusAssist: unknown
 		// programReturnFeedEnable: boolean
 		// timecodeSource: unknown
+	}
+
+	output: {
+		/** Status overlay enable */
+		overlayEnable: boolean
+
+		// frameGuidesStyle: number
+		// frameGuidesOpacity: number
+		// overlays: unknown
 	}
 
 	colorCorrection: {

@@ -56,7 +56,7 @@ export enum AtemCameraControlAudioParameter {
 }
 
 export enum AtemCameraControlOutputParameter {
-	OverlayEnables = 0,
+	OverlayEnable = 0,
 	FrameGuidesStyleCamera3_x = 1,
 	FrameGuidesOpacityCamera3_x = 2,
 	Overlays = 3,

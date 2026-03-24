@@ -33,7 +33,16 @@ export function createEmptyState(cameraId: number): AtemCameraControlState {
 		},
 
 		display: {
+			exposureAndFocusTools: {
+				zebra: false,
+				focusAssist: false,
+				falseColor: false,
+			},
 			colorBarEnable: false,
+		},
+
+		output: {
+			overlayEnable: false,
 		},
 
 		colorCorrection: {
