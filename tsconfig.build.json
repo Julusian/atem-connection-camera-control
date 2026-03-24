@@ -3,14 +3,12 @@
 	"include": ["src/**/*.ts"],
 	"exclude": ["node_modules/**", "src/**/*spec.ts", "src/**/__tests__/*", "src/**/__mocks__/*", "scratch/**"],
 	"compilerOptions": {
+		"rootDir": "./src",
 		"outDir": "./dist",
 		"baseUrl": "./",
-		"paths": {
-			"*": ["./node_modules/*"],
-			"@atem-connection/camera-control": ["./src/main.ts"]
-		},
 		"types": ["node"],
 		"target": "es2024",
-		"module": "node20"
+		"module": "node20",
+		"composite": true
 	}
 }

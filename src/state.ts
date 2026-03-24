@@ -1,5 +1,3 @@
-// TODO - should this use mobx to make this 'reactive?'
-
 export enum VideoSharpeningLevel {
 	Off = 0,
 	Low = 1,

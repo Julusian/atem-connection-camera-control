@@ -1,8 +1,11 @@
 {
-	"extends": "./tsconfig.build.json",
-	"include": ["src/**/*.ts", "examples/**/*.ts"],
-	"exclude": ["node_modules/**", "scratch/**"],
-	"compilerOptions": {
-		"types": ["jest", "node"]
-	}
+	"files": [],
+	"references": [
+		{
+			"path": "./tsconfig.build.json"
+		},
+		{
+			"path": "./tsconfig.misc.json"
+		}
+	]
 }

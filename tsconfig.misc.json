@@ -1,0 +1,14 @@
+{
+	"extends": "./tsconfig.build.json",
+	"include": ["src/**/*spec.ts", "src/**/__tests__/*", "src/**/__mocks__/*", "examples/**/*.ts", "vitest.config.ts"],
+	"exclude": ["node_modules/**", "scratch/**"],
+	"compilerOptions": {
+		"rootDir": ".",
+		"noEmit": true
+	},
+	"references": [
+		{
+			"path": "./tsconfig.build.json"
+		}
+	]
+}
