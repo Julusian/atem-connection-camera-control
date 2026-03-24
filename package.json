@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/julusian/atem-connection-camera-control.git"
+    "url": "git+https://github.com/Julusian/atem-connection-camera-control.git"
   },
   "bugs": {
-    "url": "https://github.com/julusian/atem-connection-camera-control/issues"
+    "url": "https://github.com/Julusian/atem-connection-camera-control/issues"
   },
-  "homepage": "https://github.com/julusian/atem-connection-camera-control#readme",
+  "homepage": "https://github.com/Julusian/atem-connection-camera-control#readme",
   "author": {
     "name": "Julian Waller",
     "email": "git@julusian.co.uk"
