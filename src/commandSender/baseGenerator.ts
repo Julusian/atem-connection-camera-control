@@ -186,12 +186,7 @@ export abstract class AtemCameraControlCommandGenerator<TRes> {
 		return this.addCommand(command)
 	}
 
-	displayExposureAndFocusTools(
-		cameraId: number,
-		zebra: boolean,
-		focusAssist: boolean,
-		falseColor: boolean
-	): TRes {
+	displayExposureAndFocusTools(cameraId: number, zebra: boolean, focusAssist: boolean, falseColor: boolean): TRes {
 		const value = (zebra ? 1 : 0) + (focusAssist ? 2 : 0) + (falseColor ? 4 : 0)
 		const command = new Commands.CameraControlCommand(
 			cameraId,
