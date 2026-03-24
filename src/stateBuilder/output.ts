@@ -10,11 +10,11 @@ export function applyOutputCommand(
 ): void {
 	const parameter = command.parameter as AtemCameraControlOutputParameter
 	switch (parameter) {
-		case AtemCameraControlOutputParameter.OverlayEnables: {
+		case AtemCameraControlOutputParameter.OverlayEnable: {
 			if (!changes.checkMessageParameters(command, Commands.CameraControlDataType.SINT16, 1)) return
 
-			state.output.overlayEnables = command.properties.numberData[0] !== 0
-			changes.addChange(command.source, 'output.overlayEnables')
+			state.output.overlayEnable = command.properties.numberData[0] !== 0
+			changes.addChange(command.source, 'output.overlayEnable')
 			return
 		}
 

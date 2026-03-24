@@ -42,7 +42,7 @@ export function createEmptyState(cameraId: number): AtemCameraControlState {
 		},
 
 		output: {
-			overlayEnables: false,
+			overlayEnable: false,
 		},
 
 		colorCorrection: {

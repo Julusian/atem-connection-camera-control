@@ -123,7 +123,7 @@ export interface AtemCameraControlState {
 
 	output: {
 		/** Status overlay enable */
-		overlayEnables: boolean
+		overlayEnable: boolean
 
 		// frameGuidesStyle: number
 		// frameGuidesOpacity: number

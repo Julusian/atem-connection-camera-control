@@ -205,11 +205,11 @@ export abstract class AtemCameraControlCommandGenerator<TRes> {
 
 	// Output
 
-	outputOverlayEnables(cameraId: number, enable: boolean): TRes {
+	outputOverlayEnable(cameraId: number, enable: boolean): TRes {
 		const command = new Commands.CameraControlCommand(
 			cameraId,
 			AtemCameraControlCategory.Output,
-			AtemCameraControlOutputParameter.OverlayEnables,
+			AtemCameraControlOutputParameter.OverlayEnable,
 			constructNumberProps(Commands.CameraControlDataType.SINT16, [enable ? 1 : 0])
 		)
 
