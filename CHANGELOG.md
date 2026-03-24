@@ -1,6 +1,18 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [Convential Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification) for commit guidelines.
+All notable changes to this project will be documented in this file. See [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#specification) for commit guidelines.
+
+## [0.4.0](https://github.com/Julusian/atem-connection-camera-control/compare/v0.3.0...v0.4.0) (Tue Mar 24 2026)
+
+## Breaking changes
+
+### Features
+
+* **!** convert library to esm [69b8d1c](https://github.com/Julusian/atem-connection-camera-control/commit/69b8d1c6af5890418b945bd7e8c2e4e78f739f21)
+
+### Features
+
+* add displayExposureAndFocusTools and outputOverlayEnables methods (#10) [141c0cf](https://github.com/Julusian/atem-connection-camera-control/commit/141c0cf648afb93e83eaf34099c626ab6ea95a3f)
 
 ## [0.3.0](https://github.com/julusian/atem-connection-camera-control/compare/v0.2.0...v0.3.0) (Sat Nov 23 2024)
 

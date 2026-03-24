@@ -1,6 +1,6 @@
 {
   "name": "@atem-connection/camera-control",
-  "version": "0.4.0-0",
+  "version": "0.4.0",
   "packageManager": "yarn@4.13.0",
   "description": "Library for ATEM Camera control using atem-connection.",
   "license": "MIT",
