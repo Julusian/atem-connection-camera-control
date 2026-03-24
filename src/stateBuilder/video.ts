@@ -1,8 +1,8 @@
 import { Commands } from 'atem-connection'
-import { ChangesTracker, assertNever } from './changesTracker'
-import { AtemCameraControlState } from '../state'
-import { AtemCameraControlVideoParameter } from '../ids'
-import { AtemCameraControlEvents } from '../changes'
+import { ChangesTracker, assertNever } from './changesTracker.js'
+import { AtemCameraControlState } from '../state.js'
+import { AtemCameraControlVideoParameter } from '../ids.js'
+import { AtemCameraControlEvents } from '../changes.js'
 
 export function applyVideoCommand(
 	changes: ChangesTracker,

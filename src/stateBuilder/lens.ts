@@ -1,8 +1,8 @@
 import { Commands } from 'atem-connection'
-import { ChangesTracker, assertNever } from './changesTracker'
-import { AtemCameraControlState } from '../state'
-import { AtemCameraControlLensParameter } from '../ids'
-import { AtemCameraControlEvents } from '../changes'
+import { ChangesTracker, assertNever } from './changesTracker.js'
+import { AtemCameraControlState } from '../state.js'
+import { AtemCameraControlLensParameter } from '../ids.js'
+import { AtemCameraControlEvents } from '../changes.js'
 
 export function applyLensCommand(
 	changes: ChangesTracker,

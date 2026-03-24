@@ -7,9 +7,9 @@ import {
 	AtemCameraControlMediaParameter,
 	AtemCameraControlOutputParameter,
 	AtemCameraControlVideoParameter,
-} from '../ids'
-import { constructNumberProps, constructBooleanProps } from './props'
-import { VideoSharpeningLevel } from '../state'
+} from '../ids.js'
+import { constructNumberProps, constructBooleanProps } from './props.js'
+import { VideoSharpeningLevel } from '../state.js'
 
 export abstract class AtemCameraControlCommandGenerator<TRes> {
 	protected abstract addCommand(command: Commands.CameraControlCommand): TRes

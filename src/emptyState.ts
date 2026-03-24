@@ -1,4 +1,4 @@
-import { AtemCameraControlState, VideoSharpeningLevel } from './state'
+import { AtemCameraControlState, VideoSharpeningLevel } from './state.js'
 
 export function createEmptyState(cameraId: number): AtemCameraControlState {
 	return {

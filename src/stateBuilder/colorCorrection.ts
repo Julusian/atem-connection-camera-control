@@ -1,8 +1,8 @@
 import { Commands } from 'atem-connection'
-import { ChangesTracker, assertNever } from './changesTracker'
-import { AtemCameraControlState } from '../state'
-import { AtemCameraControlColorCorrectionParameter } from '../ids'
-import { AtemCameraControlEvents } from '../changes'
+import { ChangesTracker, assertNever } from './changesTracker.js'
+import { AtemCameraControlState } from '../state.js'
+import { AtemCameraControlColorCorrectionParameter } from '../ids.js'
+import { AtemCameraControlEvents } from '../changes.js'
 
 export function applyColorCorrectionCommand(
 	changes: ChangesTracker,

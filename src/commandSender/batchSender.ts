@@ -1,5 +1,5 @@
 import { Commands, type Atem } from 'atem-connection'
-import { AtemCameraControlCommandGenerator } from './baseGenerator'
+import { AtemCameraControlCommandGenerator } from './baseGenerator.js'
 
 export class AtemCameraControlBatchCommandSender extends AtemCameraControlCommandGenerator<void> {
 	readonly #atem: Atem

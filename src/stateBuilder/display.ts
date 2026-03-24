@@ -1,7 +1,7 @@
 import { Commands } from 'atem-connection'
-import { ChangesTracker, assertNever } from './changesTracker'
-import { AtemCameraControlState } from '../state'
-import { AtemCameraControlDisplayParameter } from '../ids'
+import { ChangesTracker, assertNever } from './changesTracker.js'
+import { AtemCameraControlState } from '../state.js'
+import { AtemCameraControlDisplayParameter } from '../ids.js'
 
 export function applyDisplayCommand(
 	changes: ChangesTracker,

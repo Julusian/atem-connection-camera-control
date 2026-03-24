@@ -1,5 +1,5 @@
 import { Commands } from 'atem-connection'
-import type { AtemCameraControlChanges, AtemCameraControlEvents } from '../changes'
+import type { AtemCameraControlChanges, AtemCameraControlEvents } from '../changes.js'
 
 export class ChangesTracker {
 	readonly #changes = new Map<number, AtemCameraControlChanges>()
