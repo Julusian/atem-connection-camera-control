@@ -150,6 +150,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      pages: write # to deploy to Pages
       id-token: write # scoped for as short as possible, as this gives write access to npm
 
     environment:
